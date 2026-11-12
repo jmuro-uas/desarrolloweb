@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Facultad de Informática </title>
+</head>
+<body>
+    <h1>Facultad de Informática</h1>
+    <img src="https://i0.wp.com/miuniversidadculiacan.com/wp-content/uploads/2010/06/2013-09-25-3974.jpg?w=500&ssl=1" width="480" height="300">
+    <p>Bienvenidos a la Facultad de Informática (<a href="https://www.uas.edu.mx">UAS</a>).</p>
+    <ul>
+    <li>Lic. En informatica </li>
+    <li>Ing. en ciencia de datos.</li>
+    <li>ITSE </li>
+</ul>
+
+<h1>Alumnos de la Facultad</h1>
+<table>
+    <tr>
+        <th>Carrera </th>
+        <th>Número de Alumnos </th>
+
+    </tr>
+    <tr>
+        <td>Informática</td>
+        <td>898</td>
+ 
+    </tr>
+    <tr>
+        <td>Ciencia de datos</td>
+        <td>346</td>
+
+    </tr>
+    <tr>
+        <td>ITSE</td>
+        <td>51</td>
+  
+    </tr>
+    
+</table>
+
+    <h2>Formulario</h2>
+    <form action="/submit-feedback" method="POST">
+        <fieldset>
+            <legend>Comentarios</legend>
+    
+            <!-- Name Field -->
+            <label for="name">Nombre:</label><br>
+            <input type="text" id="name" name="name" placeholder="Introduce tu nombre" required><br><br>
+    
+            <!-- Email Field -->
+            <label for="email">Email:</label><br>
+            <input type="email" id="email" name="email" placeholder="Introduce tu email" required><br><br>
+    
+            <!-- Comments Field -->
+            <label for="comments">Comentarios:</label><br>
+            <textarea id="comments" name="comments" rows="4" cols="50" placeholder="Comenta aquí..."></textarea><br><br>
+    
+            <!-- Submit Button -->
+            <button type="submit">Enviar</button>
+        </fieldset>
+    </form>
+
+
+</body>
+</html>
