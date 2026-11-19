@@ -1,127 +1,22 @@
-<!DOCTYPE html>
-<html>
-<head>
-<meta charset="UTF-8">
-<title>Página</title>
-<style>
-  * { box-sizing: border-box; margin: 0; padding: 0; }
-  body { font-family: system-ui, sans-serif; background: #f4f5f7; color: #222; }
-  .header { background: #0b3d6e; color: #fff; display: flex; align-items: center; justify-content: space-between; padding: 14px 32px; }
-  .logo { display: flex; align-items: center; gap: 10px; font-weight: 700; font-size: 18px; }
-  .logo img { width: 40px; height: 40px; background: #fff; border-radius: 50%; }
-  .menu { display: flex; gap: 24px; }
-  .menu-item { cursor: pointer; opacity: .85; }
-  .menu-item:hover { opacity: 1; text-decoration: underline; }
-  .menu-item.activo { border-bottom: 2px solid #f2c94c; }
-  .banner { background: linear-gradient(120deg, #0b3d6e, #1f6fb2); color: #fff; padding: 56px 32px; }
-  .titulo-grande { font-size: 40px; font-weight: 800; margin-bottom: 10px; }
-  .subtitulo { font-size: 18px; opacity: .9; }
-  .contenedor { display: grid; grid-template-columns: 3fr 1fr; gap: 28px; padding: 32px; }
-  .titulo-seccion { font-size: 24px; font-weight: 700; margin-bottom: 16px; }
-  .tarjetas { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 16px; margin-bottom: 32px; }
-  .tarjeta { background: #fff; border-radius: 8px; padding: 18px; box-shadow: 0 1px 3px rgba(0,0,0,.12); }
-  .tarjeta-titulo { font-weight: 700; font-size: 17px; margin-bottom: 6px; }
-  .tarjeta-fecha { color: #999; font-size: 13px; margin-bottom: 12px; }
-  .boton { display: inline-block; background: #1f6fb2; color: #fff; padding: 8px 14px; border-radius: 6px; cursor: pointer; font-size: 14px; }
-  .boton:hover { background: #0b3d6e; }
-  .formulario { background: #fff; border-radius: 8px; padding: 22px; box-shadow: 0 1px 3px rgba(0,0,0,.12); max-width: 520px; }
-  .formulario input, .formulario select { width: 100%; padding: 10px; margin-bottom: 12px; border: 1px solid #ccc; border-radius: 6px; font-size: 15px; }
-  .formulario input:focus { outline: none; }
-  .opciones { margin-bottom: 14px; color: #555; }
-  .lateral { background: #fff; border-radius: 8px; padding: 18px; box-shadow: 0 1px 3px rgba(0,0,0,.12); height: fit-content; }
-  .aviso { padding: 10px 0; border-bottom: 1px solid #eee; font-size: 14px; }
-  .icono-cerrar { float: right; cursor: pointer; color: #999; }
-  .mensaje { display: none; margin-top: 12px; color: #1b7f3b; font-weight: 600; }
-  .footer { background: #222; color: #bbb; padding: 20px 32px; font-size: 14px; display: flex; justify-content: space-between; }
-  .redes img { width: 24px; height: 24px; margin-left: 8px; cursor: pointer; background: #555; border-radius: 4px; }
-</style>
-</head>
-<body>
 
 <div class="header">
-  <div class="logo">
-    <img src="logo.png">
-    <div>Semana de la Informática 2026</div>
-  </div>
+  <img src="logo.png">
   <div class="menu">
-    <div class="menu-item" onclick="location.href='#'">Inicio</div>
-    <div class="menu-item activo" onclick="location.href='#'">Programa</div>
-    <div class="menu-item" onclick="location.href='#registro'">Registro</div>
-    <div class="menu-item" onclick="location.href='#'">Contacto</div>
+    <div onclick="location.href='/'">Inicio</div>
+    <div onclick="location.href='/registro'">Registro</div>
   </div>
 </div>
-
-<div class="banner">
-  <div class="titulo-grande">Semana de la Informática 2026</div>
-  <div class="subtitulo">Del 24 al 28 de noviembre · Facultad de Informática Culiacán</div>
-</div>
-
-<div class="contenedor">
-  <div class="principal">
-
-    <div class="titulo-seccion">Ponencias</div>
-    <div class="tarjetas">
-      <div class="tarjeta">
-        <img src="ponencia1.jpg" width="100%">
-        <div class="tarjeta-titulo">Contenedores en producción</div>
-        <div class="tarjeta-fecha">25 de noviembre, 10:00</div>
-        <div class="boton" onclick="alert('Más información')">Ver más</div>
-      </div>
-      <div class="tarjeta">
-        <img src="ponencia2.jpg" width="100%">
-        <div class="tarjeta-titulo">Ciberseguridad en la universidad</div>
-        <div class="tarjeta-fecha">26 de noviembre, 12:00</div>
-        <div class="boton" onclick="alert('Más información')">Ver más</div>
-      </div>
-      <div class="tarjeta">
-        <img src="ponencia3.jpg" width="100%">
-        <div class="tarjeta-titulo">Introducción a la nube</div>
-        <div class="tarjeta-fecha">27 de noviembre, 09:00</div>
-        <div class="boton" onclick="alert('Más información')">Ver más</div>
-      </div>
-    </div>
-
-    <div class="titulo-seccion" id="registro">Registro</div>
-    <div class="formulario">
-      <input type="text" placeholder="Nombre completo">
-      <input type="text" placeholder="Correo institucional">
-      <input type="number" placeholder="Número de cuenta">
-      <input type="number" placeholder="Teléfono">
-      <select>
-        <option>Semestre</option>
-        <option>1</option><option>3</option><option>5</option><option>7</option><option>9</option>
-      </select>
-      <div class="opciones">
-        Modalidad:
-        <input type="radio" name="m" style="width:auto"> Presencial
-        <input type="radio" name="m" style="width:auto"> Virtual
-      </div>
-      <div class="boton" onclick="enviar()">Registrarme</div>
-      <div class="mensaje" id="mensaje">¡Registro enviado!</div>
-    </div>
-
+<div class="contenido">
+  <div class="titulo">Registro al evento</div>
+  <div>
+    <input placeholder="Nombre">
+    <input placeholder="Correo">
+    <input placeholder="Teléfono" type="number">
+    Modalidad:
+    <input type="radio" name="m"> Presencial
+    <input type="radio" name="m"> Virtual
+    <img src="enviar.png" onclick="enviar()">
   </div>
-
-  <div class="lateral">
-    <div class="titulo-seccion">Avisos</div>
-    <div class="aviso"><span class="icono-cerrar" onclick="this.parentElement.remove()">×</span>Cupo limitado a 200 asistentes.</div>
-    <div class="aviso"><span class="icono-cerrar" onclick="this.parentElement.remove()">×</span>Constancia con 80% de asistencia.</div>
-    <img src="decoracion.png" alt="decoracion.png" width="100%">
-  </div>
+  <img src="decoracion.png" alt="decoracion.png">
 </div>
-
-<div class="footer">
-  <div>© 2026 Universidad Autónoma de Sinaloa</div>
-  <div class="redes">
-    <img src="facebook.png" onclick="location.href='#'">
-    <img src="x.png" onclick="location.href='#'">
-  </div>
-</div>
-
-<script>
-  function enviar() {
-    document.getElementById('mensaje').style.display = 'block';
-  }
-</script>
-</body>
-</html>
+<div class="footer">UAS 2026</div>
